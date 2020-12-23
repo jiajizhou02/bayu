@@ -121,9 +121,9 @@ public class EstateService {
     public List<FcCell> insertCell(CellMessage[] cellMessages) {
         List<FcCell> list =new ArrayList<>();
         for (CellMessage cellMessage:cellMessages) {
-            //楼层
+            
             for (int i = 1; i < cellMessage.getStopFloor(); i++) {
-                //房间号
+                
                 for (int j = cellMessage.getStartCellId(); j<=cellMessage.getStopCellId(); j++) {
                     FcCell fcCell = new FcCell();
                     fcCell.setUnitCode(cellMessage.getUnitCode());
